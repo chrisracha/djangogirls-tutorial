@@ -1,7 +1,29 @@
 body {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
+    margin: 5vw;
+    background-color: #020612;
+    color: #ffff;
 }
 
 h1, h2 {
     font-weight: bold;
+}
+
+h1 {
+    color: #00A7F5;
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #F6339A;
+}
+
+article {
+    padding: 20px 0;
+}
+
+time {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+    font-size: 0.7rem;
 }

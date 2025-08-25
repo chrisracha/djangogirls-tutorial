@@ -7,17 +7,23 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
-    <body>
-        <h1>Django Blog</h1>
-        {% for post in posts %}
-            <article>
-                <time>published: {{ post.published_date }}</time>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </article>
-        {% endfor %}
+    <body class="font-inter bg-gray-50 min-h-screen p-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-900 mb-8">Django Blog</h1>
+            
+            {% for post in posts %}
+                <article class="bg-white rounded-lg shadow-md p-6 mb-6 border border-gray-200">
+                    <time class="text-sm text-gray-500 font-jetbrains">published: {{ post.published_date }}</time>
+                    <h2 class="text-2xl font-bold text-gray-900 mt-2 mb-3">
+                        <a href="" class="hover:text-blue-600 transition-colors">{{ post.title }}</a>
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed">{{ post.text|linebreaksbr }}</p>
+                </article>
+            {% endfor %}
+        </div>
     </body>
 </html>
