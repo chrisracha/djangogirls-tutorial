@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <article class="max-w-3xl mx-auto px-6 py-10 bg-white">
+        {% if post.published_date %}
+            <time class="block text-sm text-gray-500 mb-4">
+                {{ post.published_date }}
+            </time>
+        {% endif %}
+
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+            {{ post.title }}
+        </h2>
+
+        <div class="prose prose-lg text-gray-700 leading-relaxed">
+            {{ post.text|linebreaksbr }}
+        </div>
+    </article>
+{% endblock %}
