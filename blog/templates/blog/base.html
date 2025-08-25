@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>samu's vlog extravaganza</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body class="font-sans bg-gray-50 min-h-screen p-8" style="font-family: 'Inter', sans-serif;">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-900 mb-8">
+                <a href="/">Django Blog</a>
+            </h1>
+            <main>
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+    </body>
+</html>
